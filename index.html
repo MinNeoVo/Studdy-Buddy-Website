@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0860C2" />
+    <meta
+      name="description"
+      content="Study Buddy — chương trình hỗ trợ học tập đồng đẳng dành cho sinh viên FPT University."
+    />
+    <title>Study Buddy — Học cùng nhau, tiến bộ cùng nhau</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Be Vietnam Pro", "sans-serif"] },
+            colors: {
+              brand: {
+                blue: "#0860C2",
+                navy: "#0F2D59",
+                green: "#269E68",
+                sky: "#E2F4FF",
+                mint: "#E5F7EC",
+                yellow: "#FFE58A",
+                surface: "#F8FBFF",
+              },
+            },
+            boxShadow: {
+              comic: "5px 5px 0 #0F2D59",
+              "comic-blue": "4px 4px 0 #0F2D59",
+              "comic-green": "4px 4px 0 #14583D",
+              "card-soft": "0 12px 32px rgba(15,45,89,.08)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      ::selection {
+        background: #ffe58a;
+        color: #0f2d59;
+      }
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-700">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

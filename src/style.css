@@ -1,0 +1,36 @@
+:root {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.paint-stroke {
+  position: relative;
+  isolation: isolate;
+}
+.paint-stroke:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 8% -4%;
+  background: #dceeff;
+  border-radius: 45% 18% 35% 20%;
+  transform: rotate(-1.5deg);
+}
+.hero-art {
+  background: radial-gradient(circle at 50% 45%, #e4f6ff 0, transparent 65%);
+}
