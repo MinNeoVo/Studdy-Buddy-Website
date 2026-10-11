@@ -41,7 +41,7 @@ const REGISTRATION = {
     qr: "",
   },
 };
-const logoUrl = "../img/studyBuddyLogo.jpg";
+const logoUrl = "/img/studyBuddyLogo.jpg";
 const problems = [
   {
     icon: Search,
