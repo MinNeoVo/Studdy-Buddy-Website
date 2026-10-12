@@ -23,6 +23,8 @@ import {
   Search,
   Compass,
 } from "lucide-react";
+import { SiZalo } from "@icons-pack/react-simple-icons";
+import ContactButtons from "./ContactButtons";
 
 // Replace these placeholders with your real Google Forms links and QR image paths.
 const REGISTRATION = {
@@ -30,7 +32,7 @@ const REGISTRATION = {
     title: "Đăng ký tham gia Study Buddy",
     description:
       "Đăng ký nhu cầu học tập để chúng mình hiểu môn học, mục tiêu và lịch rảnh của bạn.",
-    url: "https://forms.google.com",
+    url: "https://forms.gle/SdNZWU6CH3JgsZU8A",
     qr: "",
   },
   mentor: {
@@ -112,7 +114,7 @@ const mentorBenefits = [
 const faqs = [
   [
     "Study Buddy là gì?",
-    "Study Buddy là chương trình hỗ trợ học tập đồng đẳng dành cho sinh viên FPT University, giúp kết nối nhóm học nhỏ và duy trì việc học với mục tiêu rõ ràng cùng sự hỗ trợ của Peer Mentor.",
+    "Study Buddy là chương trình hỗ trợ học tập đồng đẳng dành cho sinh viên FPT University ngành SE đang học các môn liên quan đến code, giúp kết nối nhóm học nhỏ và duy trì việc học với mục tiêu rõ ràng cùng sự hỗ trợ của Peer Mentor.",
   ],
   [
     "Ai có thể tham gia Study Buddy?",
@@ -132,7 +134,7 @@ const faqs = [
   ],
   [
     "Làm thế nào để đăng ký?",
-    "Chọn hình thức tham gia phù hợp, sau đó quét QR hoặc mở Google Form từ phần đăng ký trên website.",
+    "Chọn hình thức tham gia phù hợp, sau đó bấm nút tham gia để mở Google Form từ phần đăng ký trên website. Nếu bạn có thắc mắc cần giải đáp, hãy liên hệ với chúng tôi qua Zalo",
   ],
 ];
 
@@ -200,6 +202,7 @@ export default function App() {
     ["Peer Mentor", "#peer-mentor"],
     ["Hỏi đáp", "#faq"],
   ];
+
   const go = () => setMenuOpen(false);
   return (
     <div className="overflow-hidden bg-white text-slate-700">
@@ -245,11 +248,8 @@ export default function App() {
                 {label}
               </a>
             ))}
-            <button
-              onClick={() => openForm(participant)}
-              className="mt-1 rounded-xl bg-brand-blue px-4 py-3 font-bold text-white"
-            >
-              Đăng ký tham gia
+            <button className="mt-1 rounded-xl bg-brand-blue px-4 py-3 font-bold text-white">
+              <a href="#register">Đăng ký tham gia</a>
             </button>
           </nav>
         )}
@@ -693,7 +693,7 @@ export default function App() {
                 <ul className="space-y-3 text-white/75">
                   <li>
                     <button
-                      onClick={() => openForm(participant)}
+                      onClick={() => openForm("participant")}
                       className="hover:text-white"
                     >
                       Tìm bạn học cùng
@@ -701,7 +701,7 @@ export default function App() {
                   </li>
                   <li>
                     <button
-                      onClick={() => openForm(mentor)}
+                      onClick={() => openForm("mentor")}
                       className="hover:text-white"
                     >
                       Ứng tuyển Peer Mentor
@@ -731,6 +731,7 @@ export default function App() {
           onClose={() => setRegistration(null)}
         />
       )}
+      <ContactButtons />
     </div>
   );
 }
